@@ -28,7 +28,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="bg-white border-gray-300 rounded-md p-[0.49rem] flex items-center justify-center">
-            <img src="./logo.png" alt="logo" className="w-[4.5rem] h-14" />
+            <img src="./logo.png" alt="logo" className="w-[5rem] h-14" />
           </div>
           <div className="pl-[2.1rem]">
             <h1 className="text-[22px] font-[700] text-gray-900 leading-[2.2rem]">
@@ -43,7 +43,10 @@ export default function Header() {
 
         {/* Burger Menu (Mobile) */}
         <div className="xl:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
             {menuOpen ? <FaTimes size={26} /> : <FaBars size={26} />}
           </button>
         </div>
@@ -63,26 +66,33 @@ export default function Header() {
           {/* Buttons */}
           <button
             onClick={() => setServiceModalOpen(true)}
-            className={`${baseBtn} border-[var(--dynamic-color)] text-[var(--dynamic-color)]`}
+            className={`${baseBtn} border-black text-black hover:bg-black hover:text-white`}
           >
             Choose Service
           </button>
 
           <button
-            className={`${baseBtn} border-[var(--dynamic-color)] text-[var(--dynamic-color)]`}
+            className={`${baseBtn} border-black text-black hover:bg-black hover:text-white`}
           >
             Book Now
           </button>
 
+          {/* Phone Button */}
           <button
-            className={`${baseBtn} flex items-center gap-2 bg-white text-black border-black`}
+            className={`${baseBtn} flex items-center gap-3 bg-white text-black border-black rounded-full hover:bg-black hover:text-white`}
+            style={{ borderWidth: "1.5px" }}
           >
-            <FaPhoneAlt size={18} />
+            <span
+              className="flex items-center justify-center rounded-full bg-black text-white group-hover:bg-white group-hover:text-black"
+              style={{ width: 30, height: 27 }}
+            >
+              <FaPhoneAlt size={16} />
+            </span>
             9825794210
           </button>
 
           <button
-            className={`${baseBtn} flex items-center gap-2 border-[var(--dynamic-color)] text-[var(--dynamic-color)]`}
+            className={`${baseBtn} flex items-center gap-2 border-black text-black hover:bg-black hover:text-white`}
           >
             <FaGlobe size={18} />
             en
@@ -107,26 +117,33 @@ export default function Header() {
           {/* Buttons */}
           <button
             onClick={() => setServiceModalOpen(true)}
-            className={`${baseBtn} w-full border-[var(--dynamic-color)] text-[var(--dynamic-color)]`}
+            className={`${baseBtn} w-full border-black text-black hover:bg-black hover:text-white`}
           >
             Choose Service
           </button>
 
           <button
-            className={`${baseBtn} w-full border-[var(--dynamic-color)] text-[var(--dynamic-color)]`}
+            className={`${baseBtn} w-full border-black text-black hover:bg-black hover:text-white`}
           >
             Book Now
           </button>
 
+          {/* Mobile Phone Button */}
           <button
-            className={`${baseBtn} w-full flex items-center justify-center gap-3 bg-black text-white border-black`}
+            className={`${baseBtn} w-full flex items-center justify-center gap-3 bg-white text-black border-black rounded-full hover:bg-black hover:text-white`}
+            style={{ borderWidth: "1.5px" }}
           >
-            <FaPhoneAlt size={18} />
+            <span
+              className="flex items-center justify-center rounded-full bg-black text-white"
+              style={{ width: 30, height: 30 }}
+            >
+              <FaPhoneAlt size={16} />
+            </span>
             9825794210
           </button>
 
           <button
-            className={`${baseBtn} w-full flex items-center justify-center gap-3 border-[var(--dynamic-color)] text-[var(--dynamic-color)]`}
+            className={`${baseBtn} w-full flex items-center justify-center gap-3 border-black text-black hover:bg-black hover:text-white`}
           >
             <FaGlobe size={18} />
             en
@@ -158,7 +175,7 @@ export default function Header() {
               {services.map((service) => (
                 <div
                   key={service.id}
-                  className="cursor-pointer p-3 rounded-[12px] transition text-black hover:bg-[#d2f5f5] hover:border hover:border-gray-300 hover:shadow-sm"
+                  className="cursor-pointer p-3 rounded-[12px] transition text-black hover:bg-[#d2f5f5] hover:border hover:border-gray-300 hover:shadow"
                 >
                   <img
                     src={service.image}
