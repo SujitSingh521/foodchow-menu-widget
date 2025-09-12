@@ -31,3 +31,54 @@ A React-based web application that fetches restaurant menu data from the FoodCho
 
 ## Project Structure
 
+foodchow-frontend/
+│
+├─ public/
+│ ├─ images/ # Images used in the project
+│ └─ index.html
+│
+├─ src/
+│ ├─ api/
+│ │ └─ fetchMenuData.js # API call functions
+│ │
+│ ├─ components/
+│ │ ├─ Header.jsx # Header component with service modal
+│ │ ├─ Sidebar.jsx # Sidebar with category list
+│ │ ├─ Cart.jsx # Cart component
+│ │ ├─ MenuCard.jsx # Single menu item card
+│ │ └─ Footer.jsx # Footer component
+│ │
+│ ├─ App.jsx # Main App component
+│ ├─ index.js
+│ └─ index.css
+│
+├─ package.json
+├─ tailwind.config.js
+└─ README.md
+
+
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/SujitSingh521/foodchow-menu-widget.git
+
+
+
+Navigate to the project directory:
+cd foodchow-menu-widget
+
+
+Install dependencies:
+npm install
+
+
+Start the development server:
+npm start
+
+
+
