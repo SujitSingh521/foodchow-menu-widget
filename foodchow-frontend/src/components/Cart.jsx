@@ -1,6 +1,6 @@
 export default function Cart() {
   return (
-    <aside className="w-full md:w-1/4 mr-4 sticky top-24 h-[400px] bg-white p-6 rounded-xl shadow-md border border-gray-200">
+    <aside className="w-full md:w-1/4 mr-4 sticky top-24 h-[68vh] bg-white p-6 rounded-xl shadow-md border border-gray-200">
       <h2 className="text-2xl font-bold mb-6 border-b pb-4 text-gray-900">
         Your Cart
       </h2>
